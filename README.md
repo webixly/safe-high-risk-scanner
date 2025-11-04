@@ -1,45 +1,45 @@
 # 🛡️ Safe High-Risk Indicator Scanner (Passive)
 
-## 🎓 University Research Project
-This repository contains the official documentation and source code for **Safe High-Risk Indicator Scanner**,  
-a **passive vulnerability assessment tool** developed as part of a **Cybersecurity Research Project** at **USTHB University**.
+> A passive vulnerability assessment tool for academic cybersecurity research — developed at **USTHB University** 🎓  
 
 ---
 
-## 📘 Overview
-The **Safe High-Risk Indicator Scanner** is a Python-based tool that performs **non-intrusive** (passive) analysis of web targets.  
-It allows security students and researchers to identify and classify potential vulnerabilities based on **real CVE references**.
+## 🧭 Overview
+The **Safe High-Risk Indicator Scanner** is a Python-based project that performs **non-intrusive** (passive) web analysis.  
+It helps identify, classify, and document potential vulnerabilities using **real CVE references** —  
+all while maintaining **ethical** and **legal** testing boundaries.
 
-### 🔍 Key Features
-- Passive vulnerability scanning (no exploitation).  
-- Detection of outdated plugins and CMS components.  
-- Integration with public CVE databases.  
-- Categorization by risk level (Low / Medium / High / Critical).  
-- Modular code architecture for easy customization and future upgrades.
-
----
-
-## 🧠 Research Objectives
-1. Understand and apply principles of **passive reconnaissance**.  
-2. Identify and classify common **web vulnerabilities** ethically.  
-3. Develop a **Python-based security tool** for academic purposes.  
-4. Enhance documentation and research presentation skills.  
+### ✨ Core Highlights
+✅ Passive scanning — zero exploitation, 100% safe  
+✅ Detects outdated CMS components and plugins  
+✅ Integrates with public CVE databases  
+✅ Organizes results by risk level: *Low / Medium / High / Critical*  
+✅ Modular design — simple to extend and automate  
 
 ---
 
-## 🧩 Technical Stack
+## 🎯 Research Objectives
+1. Apply **passive reconnaissance** methods in ethical cybersecurity.  
+2. Analyze and document **real-world vulnerabilities** responsibly.  
+3. Build a **Python-based academic tool** for web risk analysis.  
+4. Strengthen documentation, teamwork, and research reporting skills.  
+
+---
+
+## ⚙️ Technical Stack
+
 | Component | Description |
 |------------|-------------|
-| **Language** | Python 3.x |
-| **Libraries** | `requests`, `argparse`, `colorama`, `re`, `json` |
-| **Platform** | Cross-platform (Linux, Windows, macOS) |
-| **Interface** | Command Line (CLI) |
+| 🐍 **Language** | Python 3.x |
+| 📦 **Libraries** | `requests`, `argparse`, `colorama`, `re`, `json` |
+| 💻 **Platform** | Cross-platform (Linux, Windows, macOS) |
+| 🧩 **Interface** | Command Line (CLI) |
 
 ---
 
-## ⚙️ Installation
+## 🚀 Installation
 
-Clone the repository and install dependencies:
+Clone the repository and install all dependencies:
 
 ```bash
 git clone https://github.com/webixly/safe-high-risk-scanner.git
@@ -49,15 +49,16 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Usage
+## 🧪 Usage
 
-Run the scanner with a target URL:
+Run the scanner on any authorized target:
 
 ```bash
 python3 scanner-vul.py --url https://example.com
 ```
 
-### Optional arguments:
+### 🧰 Optional arguments
+
 | Argument | Description |
 |-----------|-------------|
 | `--url` | Target URL to scan |
@@ -71,7 +72,7 @@ python3 scanner-vul.py --url https://example.com --level 3 --output report.txt
 
 ---
 
-## 📄 Example Output
+## 📊 Example Output
 ```
 [+] Target: https://example.com
 [!] Detected CVE-2023-12345 (WordPress Plugin X)
@@ -81,46 +82,58 @@ python3 scanner-vul.py --url https://example.com --level 3 --output report.txt
 
 ---
 
-## 🧾 Academic Context
-This project is part of a university research course in **Cybersecurity & Network Systems**  
+## 🎓 Academic Context
+This repository is part of a **Cybersecurity & Network Systems** research project  
 at **USTHB – Faculty of Electronics**.  
-It demonstrates ethical vulnerability analysis methods and secure coding practices.
 
-You can include a detailed research paper or report in a `/docs` folder for presentation.
+It demonstrates:
+- Ethical passive reconnaissance methods  
+- CVE-based vulnerability classification  
+- Secure and responsible academic cybersecurity practices  
+
+📁 A complete research paper or technical report can be included in a `/docs` folder for submission.
 
 ---
 
 ## 🔮 Future Work
-- Add a web-based dashboard for visual reporting.  
-- Integrate AI/ML for vulnerability prediction.  
-- Expand CVE database synchronization.  
-- Implement automated scan scheduling.
+🧠 Integrate AI/ML models for vulnerability prediction  
+📊 Add a web dashboard for live visual reports  
+🌐 Synchronize with external CVE APIs automatically  
+⏰ Automate periodic passive scans  
 
 ---
 
-## 🔐 Ethics and Legal Disclaimer
-> This tool is developed strictly for **educational and research purposes**.  
-> The authors and contributors are **not responsible for misuse** or illegal activity.  
-> Use only on systems you have **explicit permission** to analyze.
+## ⚖️ Ethics & Legal Disclaimer
+> ⚠️ This tool is created **solely for educational and research purposes**.  
+> The developers bear **no responsibility** for misuse or illegal activity.  
+> Always ensure **explicit authorization** before scanning any target.
 
 ---
 
 ## 👨‍💻 Author
-**Name:** Pablo (Webixly)  
-**University:** USTHB – Faculty of Electronics  
-**Program:** Cybersecurity & Network Systems  
-**GitHub:** [webixly](https://github.com/webixly)  
-📧 **pablo.webixly@gmail.com**
+
+| Info | Details |
+|------|----------|
+| 🧑‍💻 **Name** | Pablo *(Webixly)* |
+| 🎓 **University** | USTHB – Faculty of Electronics |
+| 💼 **Program** | Cybersecurity & Network Systems |
+| 🌐 **GitHub** | [webixly](https://github.com/webixly) |
+| 📧 **Email** | Aymenmoh20000@gmail.com |
 
 ---
 
-## ⭐ Acknowledgments
-- Professors and mentors from USTHB for academic guidance.  
-- Open-source cybersecurity communities for shared tools and datasets.  
-- Fellow students for collaboration and testing support.  
+## 🌟 Acknowledgments
+Special thanks to:
+- 🧭 USTHB professors & mentors for continuous guidance  
+- 💡 Open-source cybersecurity communities  
+- 🤝 Fellow students who participated in testing and feedback  
 
 ---
 
-## 📚 License
-This project is licensed under the [MIT License](LICENSE).  
-You are free to use, modify, and share it with proper credit.
+## 📜 License
+This project is licensed under the **[MIT License](LICENSE)**.  
+You are free to use, modify, and share this project with proper credit.
+
+---
+
+> _"Security through knowledge — ethics through discipline."_ 🧠
