@@ -1,86 +1,126 @@
-from pathlib import Path
+# 🛡️ Safe High-Risk Indicator Scanner (Passive)
 
-readme_content = """# Safe High-Risk Indicator Scanner (Passive)
-
-[![Build: CI](https://github.com/webixly/safe-high-risk-scanner/actions/workflows/ci.yml/badge.svg)](https://github.com/webixly/safe-high-risk-scanner/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
-[![Issues](https://img.shields.io/github/issues/webixly/safe-high-risk-scanner)](https://github.com/webixly/safe-high-risk-scanner/issues)
-[![Security Policy](https://img.shields.io/badge/Security-Policy-yellow.svg)](./SECURITY.md)
+## 🎓 University Research Project
+This repository contains the official documentation and source code for **Safe High-Risk Indicator Scanner**,  
+a **passive vulnerability assessment tool** developed as part of a **Cybersecurity Research Project** at **USTHB University**.
 
 ---
 
-## Executive Summary
+## 📘 Overview
+The **Safe High-Risk Indicator Scanner** is a Python-based tool that performs **non-intrusive** (passive) analysis of web targets.  
+It allows security students and researchers to identify and classify potential vulnerabilities based on **real CVE references**.
 
-**Safe High-Risk Indicator Scanner** is a passive (GET-only) reconnaissance tool designed for academic, teaching, and research use. The scanner collects non-intrusive indicators that may suggest elevated risk — exposed admin panels, backup artifacts, directory listings, upload endpoints, debug pages — and correlates detected technologies with public CVE data (NVD) for awareness and prioritized remediation suggestions.
-
-**Important:** This tool is **not** an exploitation framework and must only be used against systems you own or systems for which you have explicit written authorization.
-
----
-
-## Table of Contents
-
-- [Key Features](#key-features)  
-- [Intended Use & Legal Notice](#intended-use--legal-notice)  
-- [Quick Start (Install & Run)](#quick-start-install--run)  
-- [Usage Example](#usage-example)  
-- [Output — Report Example](#output--report-example)  
-- [Project Structure](#project-structure)  
-- [Testing & CI](#testing--ci)  
-- [Limitations & Known Risks](#limitations--known-risks)  
-- [Contributing & Code of Conduct](#contributing--code-of-conduct)  
-- [Security / Responsible Disclosure](#security--responsible-disclosure)  
-- [Citation / Academic Use](#citation--academic-use)  
-- [License & Contact](#license--contact)
+### 🔍 Key Features
+- Passive vulnerability scanning (no exploitation).  
+- Detection of outdated plugins and CMS components.  
+- Integration with public CVE databases.  
+- Categorization by risk level (Low / Medium / High / Critical).  
+- Modular code architecture for easy customization and future upgrades.
 
 ---
 
-## Key Features
-
-- Passive GET-only checks across common sensitive paths (admin pages, backups, phpinfo, robots, sitemap).  
-- HTTP header analysis (HSTS, CSP, X-Frame-Options, X-Content-Type-Options, Secure/HttpOnly cookie flags).  
-- HTML parsing for forms (including file upload hints), meta generator, and JS library fingerprinting (jQuery, Bootstrap, React, Vue, Angular).  
-- TLS certificate inspection (protocol version, expiry).  
-- Heuristic product fingerprinting (Server, X-Powered-By, CMS generator meta) and keyword-based queries to NVD for CVE awareness.  
-- Local CVE cache (`cve_cache_high_risk.json`) to minimize repeated external queries.  
-- Generates a human-readable Markdown report: `high_risk_report.md`.  
-- Designed to be CI-friendly and packageable (PyInstaller recommended steps included in docs).
+## 🧠 Research Objectives
+1. Understand and apply principles of **passive reconnaissance**.  
+2. Identify and classify common **web vulnerabilities** ethically.  
+3. Develop a **Python-based security tool** for academic purposes.  
+4. Enhance documentation and research presentation skills.  
 
 ---
 
-## Intended Use & Legal Notice
-
-**Do not use this tool against systems you do not own or do not have explicit, written permission to test.** Unauthorized scanning can be illegal and unethical.
-
-By running this tool you confirm that you have the required authorization to scan any specified target(s) and that you will follow applicable laws and institutional policies.
+## 🧩 Technical Stack
+| Component | Description |
+|------------|-------------|
+| **Language** | Python 3.x |
+| **Libraries** | `requests`, `argparse`, `colorama`, `re`, `json` |
+| **Platform** | Cross-platform (Linux, Windows, macOS) |
+| **Interface** | Command Line (CLI) |
 
 ---
 
-## Quick Start (Install & Run)
+## ⚙️ Installation
 
-Requirements: Python 3.10+ recommended.
+Clone the repository and install dependencies:
 
 ```bash
-# Clone repository
 git clone https://github.com/webixly/safe-high-risk-scanner.git
 cd safe-high-risk-scanner
-
-# Create and activate virtual environment
-python -m venv .venv
-# Linux / macOS
-source .venv/bin/activate
-# Windows (PowerShell)
-# .venv\\Scripts\\Activate.ps1
-
-# Install dependencies
 pip install -r requirements.txt
+```
 
-# Optional: set NVD API key for higher rate limits
-# Linux/macOS
-export NVD_API_KEY="your_api_key_here"
-# Windows (PowerShell)
-# setx NVD_API_KEY "your_api_key_here"
+---
 
-# Run the scanner (interactive)
-python src/scanner.py
-# Enter the target URL when prompted (e.g., example.com or https://example.com)
+## 🚀 Usage
+
+Run the scanner with a target URL:
+
+```bash
+python3 scanner-vul.py --url https://example.com
+```
+
+### Optional arguments:
+| Argument | Description |
+|-----------|-------------|
+| `--url` | Target URL to scan |
+| `--output` | Save scan results to a file |
+| `--level` | Scan depth (1 = basic, 3 = full) |
+
+**Example:**
+```bash
+python3 scanner-vul.py --url https://example.com --level 3 --output report.txt
+```
+
+---
+
+## 📄 Example Output
+```
+[+] Target: https://example.com
+[!] Detected CVE-2023-12345 (WordPress Plugin X)
+[!] Risk Level: High
+[+] Passive Analysis Completed Successfully.
+```
+
+---
+
+## 🧾 Academic Context
+This project is part of a university research course in **Cybersecurity & Network Systems**  
+at **USTHB – Faculty of Electronics**.  
+It demonstrates ethical vulnerability analysis methods and secure coding practices.
+
+You can include a detailed research paper or report in a `/docs` folder for presentation.
+
+---
+
+## 🔮 Future Work
+- Add a web-based dashboard for visual reporting.  
+- Integrate AI/ML for vulnerability prediction.  
+- Expand CVE database synchronization.  
+- Implement automated scan scheduling.
+
+---
+
+## 🔐 Ethics and Legal Disclaimer
+> This tool is developed strictly for **educational and research purposes**.  
+> The authors and contributors are **not responsible for misuse** or illegal activity.  
+> Use only on systems you have **explicit permission** to analyze.
+
+---
+
+## 👨‍💻 Author
+**Name:** Pablo (Webixly)  
+**University:** USTHB – Faculty of Electronics  
+**Program:** Cybersecurity & Network Systems  
+**GitHub:** [webixly](https://github.com/webixly)  
+📧 **pablo.webixly@gmail.com**
+
+---
+
+## ⭐ Acknowledgments
+- Professors and mentors from USTHB for academic guidance.  
+- Open-source cybersecurity communities for shared tools and datasets.  
+- Fellow students for collaboration and testing support.  
+
+---
+
+## 📚 License
+This project is licensed under the [MIT License](LICENSE).  
+You are free to use, modify, and share it with proper credit.
