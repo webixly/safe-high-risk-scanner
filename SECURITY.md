@@ -9,7 +9,7 @@
 If you discover a security issue in this repository (code bug, logic flaw, or other), please follow these steps:
 
 1. **Do not disclose the vulnerability publicly.** Public disclosure may put users at risk.
-2. Open a **private GitHub Issue** labeled `[SECURITY]` or send an email to the contact below with `[SECURITY]` in the subject line.
+2. Open a **private GitHub Issue** labeled `SECURITY` or send an email to the contact below with `SECURITY` in the subject line.
    - Email: `aymenmoh20000@gmail.com` ← **replace this** with your actual contact email.
    - Alternatively, use GitHub Security Advisories for a private disclosure.
 3. Provide the following information where possible:
@@ -77,9 +77,9 @@ If a genuine vulnerability is discovered in the project and requires assignment 
 
 ## Emergency / Critical Reports
 
-For urgent issues (active exploitation, major data exposure), please use an email subject line containing both `[SECURITY]` and `[URGENT]`. We will prioritize triage and response.
+For urgent issues (active exploitation, major data exposure), please use an email subject line containing both `SECURITY` and `URGENT`. We will prioritize triage and response.
 
-- Contact (urgent): `your.email@example.com` ← **replace** with your preferred emergency contact.
+- Contact (urgent): `aymenmoh20000@gmail.com` ← **replace** with your preferred emergency contact.
 
 ---
 
@@ -100,4 +100,5 @@ If you prefer to send encrypted reports, include your PGP public key (or fingerp
 ## Document Version
 
 - Last updated: 2025-11-04  
-- Maintainer / Security contact: `<Your Name>` — replace with your name and email above.
+- Maintainer / Security contact: `webixly` — replace with your name and email above.
+
